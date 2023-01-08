@@ -2,7 +2,7 @@ import streamlit as st
 import torch
 from transformers import T5ForConditionalGeneration, T5Tokenizer
 
-model_name = "/home/alvo/Рабочий стол/webproj/modelEnru-180k-2112-3ep-bi"
+model_name = "sml-msn/pst5-tg-fa-bidirectional"
 tokenizer = T5Tokenizer.from_pretrained(model_name)
 model = T5ForConditionalGeneration.from_pretrained(model_name)
 
