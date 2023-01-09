@@ -51,7 +51,9 @@ if st.button('Transliterate'):
 			split_n_translit(txt)
 		else:
 			st.write(translit(txt, max_length = 1024))	
-else:
-    st.write('Output: ')
+
+if st.button('Run demo'):
+	st.write('Output: ')
+	demo.start()	
 
 #st.write(str(lst))
