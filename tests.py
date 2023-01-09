@@ -6,24 +6,24 @@ from Levenshtein import distance, ratio
 def test_translit_acc_tg_fa():
 	sample = pd.read_csv('test180k.csv', sep=',').sample(1)
 	for k, row in sample.iterrows():
-	    target = row.Pers
-	    prediction = m.translit(row.Taj, max_length = 1024)
-    print('input:', row.Taj)
-    print('target:', target)
-    print('prediction:', prediction)
-    print('lev. ratio:', ratio(target, prediction))
-    assert ratio(target, prediction) > 0.8
+		target = row.Pers
+		prediction = m.translit(row.Taj, max_length = 1024)
+		print('input:', row.Taj)
+		print('target:', target)
+		print('prediction:', prediction)
+		print('lev. ratio:', ratio(target, prediction))
+	assert ratio(target, prediction) > 0.8
     
 def test_translit_acc_fa_tg():
 	sample = pd.read_csv('test180k.csv', sep=',').sample(1)
 	for k, row in sample.iterrows():
-	    target = row.Taj
-	    prediction = m.translit(row.Pers, max_length = 1024)
-    print('input:', row.Pers)
-    print('target:', target)
-    print('prediction:', prediction)
-    print('lev. ratio:', ratio(target, prediction))
-    assert ratio(target, prediction) > 0.8
+		target = row.Taj
+		prediction = m.translit(row.Pers, max_length = 1024)
+		print('input:', row.Pers)
+		print('target:', target)
+		print('prediction:', prediction)
+		print('lev. ratio:', ratio(target, prediction))
+	assert ratio(target, prediction) > 0.8
 
 def test_check_length_too_long():
 	txt = '''
