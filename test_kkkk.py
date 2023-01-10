@@ -25,6 +25,7 @@ def test_translit_acc_fa_tg():
 		print('lev. ratio:', ratio(target, prediction))
 	assert ratio(target, prediction) > 0.8
 
+# cheking if the text is too long
 def test_check_length_too_long():
 	txt = '''
 		Бунёдгузори адабиёти форсу тоҷик Абӯабдуллоҳ Рӯдакӣ соли 858 дар деҳаи Панҷрӯд аз тавобеъи Самарқанд (бинобар ин дар баъзе сарчашмаҳо Рӯдакии Самарқандӣ низ меноманд), 
