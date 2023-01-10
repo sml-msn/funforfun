@@ -1,7 +1,7 @@
 import streamlit as st
 import torch
 from transformers import T5ForConditionalGeneration, T5Tokenizer
-import demo
+
 
 model_name = "sml-msn/pst5-tg-fa-bidirectional"
 tokenizer = T5Tokenizer.from_pretrained(model_name)
@@ -55,6 +55,6 @@ if st.button('Transliterate'):
 
 if st.button('Run demo'):
 	st.write('Output: ')
-	demo.start()	
+	demo()	
 
 #st.write(str(lst))
